@@ -89,6 +89,8 @@ jobs:
           echo "Publishing legacy statuses on $REPO@$SHA => $state"
 
           for ctx in \
+            "Identity" \
+            "Determinism Check" \
             "Gates / cicullis (pull_request)" \
             "Gates / hygiene (pull_request)" \
             "Gates / selftest (pull_request)"
