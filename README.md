@@ -1,8 +1,11 @@
 # CICULLIS
 
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
-![Role](https://img.shields.io/badge/role-enforcement%20boundary-111111)
-![Surface](https://img.shields.io/badge/surface-ci%20enforcement-d73a49)
+![Role](https://img.shields.io/badge/role-enforcement%20surface-111111)
+![Identity](https://github.com/Verifrax/cicullis/actions/workflows/identity.yml/badge.svg?branch=main)
+![Determinism](https://github.com/Verifrax/cicullis/actions/workflows/determinism.yml/badge.svg?branch=main)
+![Integrity](https://github.com/Verifrax/cicullis/actions/workflows/integrity.yml/badge.svg?branch=main)
+![Deploy](https://github.com/Verifrax/cicullis/actions/workflows/pages.yml/badge.svg?branch=main)
 ![Host](https://img.shields.io/badge/host-cicullis.verifrax.net-1f6feb)
 
 Deterministic enforcement repository for `cicullis.verifrax.net`, responsible for the enforcement boundary of the Verifrax perimeter by turning declared repository and workflow rules into binary CI outcomes without becoming protocol authorship, authority issuance, governed runtime execution, proof publication, public verification tooling, archive publication, intake processing, or evidence-root chain registration.
@@ -11,7 +14,6 @@ Deterministic enforcement repository for `cicullis.verifrax.net`, responsible fo
 
 * Repository role: enforcement boundary only
 * Public host ownership: `cicullis.verifrax.net`
-* npm package: `@verifrax/cicullis`
 * Surface class: enforcement reference and CI action surface
 * Package status: repository and action surface only unless package publication is explicitly proven elsewhere
 * Stack position: enforcement boundary adjacent to governed repositories and workflow gates
@@ -391,7 +393,6 @@ The live host-label map that must remain explicit and non-contradictory is:
 * `https://docs.verifrax.net/` — documentation surface
 
 This README must remain compatible with `artifact-0005` as the load-bearing authority → execution → verification → evidence boundary without claiming that this repository alone authors, proves, seals, or registers `artifact-0005` unless that role is actually true for this repository.
-
 
 ## Security
 
