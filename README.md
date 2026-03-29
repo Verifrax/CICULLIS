@@ -1,383 +1,420 @@
-```
-SYS-001
-CICULLIS
-Irreversible CI Enforcement System
-
-STATUS: REGISTERED
-REGISTRY: https://speedkit.eu
-SNAPSHOT: https://speedkit.eu/REGISTRY_SNAPSHOT.json
-```
-
-Registered system. Identity governed by SPEEDKIT registry.
-
-STATUS: FINAL
-
----
-
-[![GitHub Marketplace](https://img.shields.io/badge/GitHub%20Marketplace-CICULLIS-blue?logo=github)](https://github.com/marketplace/actions/cicullis)
-![CI](https://img.shields.io/badge/CI-deterministic-critical)
-![Security](https://img.shields.io/badge/security-enforcement-critical)
-![Governance](https://img.shields.io/badge/governance-forward--only-important)
-![Supply Chain](https://img.shields.io/badge/supply--chain-locked-critical)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/midiakiasat/cicullis/badge)](https://securityscorecards.dev/viewer/?uri=github.com/midiakiasat/cicullis)
-![License](https://img.shields.io/badge/license-Apache--2.0-green)
-
----
-
 # CICULLIS
 
-Public host ownership: cicullis.verifrax.net.
+![License](https://img.shields.io/badge/license-Apache--2.0-blue)
+![Role](https://img.shields.io/badge/role-enforcement%20boundary-111111)
+![Surface](https://img.shields.io/badge/surface-ci%20enforcement-d73a49)
+![Host](https://img.shields.io/badge/host-cicullis.verifrax.net-1f6feb)
 
-**CICULLIS** is a deterministic GitHub Action that enforces irreversible policy contracts at CI time.
+Deterministic enforcement repository for `cicullis.verifrax.net`, responsible for the enforcement boundary of the Verifrax perimeter by turning declared repository and workflow rules into binary CI outcomes without becoming protocol authorship, authority issuance, governed runtime execution, proof publication, public verification tooling, archive publication, intake processing, or evidence-root chain registration.
 
-It is a binary merge gate.
-It emits no warnings.
-It provides no advisory mode.
-It either permits merge or blocks execution.
+## Status
 
-If CICULLIS passes, the decision is closed.
-If CICULLIS fails, the workflow terminates.
+* Repository role: enforcement boundary only
+* Public host ownership: `cicullis.verifrax.net`
+* npm package: `@verifrax/cicullis`
+* Surface class: enforcement reference and CI action surface
+* Package status: repository and action surface only unless package publication is explicitly proven elsewhere
+* Stack position: enforcement boundary adjacent to governed repositories and workflow gates
+* Authority relation: consumes governance and authority-linked rules; does not issue authority
+* Artifact relation: must stay aligned with the artifact-0005 boundary without claiming to author, execute, verify, or register artifact-0005 itself
+* License: Apache License Version 2.0
+
+## One-sentence role
 
----
+`cicullis` is the Verifrax enforcement-boundary repository and public reference surface for deterministic merge and workflow blocking rules, making repository policy executable at CI time without turning enforcement into upstream protocol authorship, authority issuance, runtime execution, or proof verification.
 
-# Executive Definition
+## What this repository is
 
-CICULLIS transforms repository governance from documentation into enforcement.
+This repository is the enforcement boundary.
 
-It guarantees that:
+Its job is to make certain classes of repository and workflow rules binary instead of advisory.
 
-* Policy requirements are executable, not aspirational.
-* Cryptographic integrity is mandatory, not advisory.
-* Provenance and custody are validated before merge.
-* Finality occurs at CI boundary, not post‑incident.
+That means this repository exists to support surfaces such as:
 
-CICULLIS is not:
+* deterministic CI enforcement
+* merge-gate behavior
+* policy-to-failure conversion
+* repository-boundary blocking rules
+* enforcement documentation
+* action usage where that usage is real and maintained
+* public explanation of what the enforcement surface does and does not do
 
-* A linter
-* A vulnerability scanner
-* A static analyzer
-* A policy suggestion engine
+This repository should let a reader answer:
 
-It is a deterministic enforcement boundary.
+* what gets blocked
+* where enforcement sits in the stack
+* what enforcement depends on
+* what enforcement does not decide
+* how enforcement relates to governance, authority, execution, and verification
 
----
+## What this repository is not
 
-# System Identity
+This repository is not:
 
-* System ID: SYS-001
-* Registry: [https://speedkit.eu](https://speedkit.eu)
-* Snapshot: [https://speedkit.eu/REGISTRY_SNAPSHOT.json](https://speedkit.eu/REGISTRY_SNAPSHOT.json)
-* Status: FINAL
-* Versioning: Semantic Versioning
-* Execution Model: Deterministic, forward-only
+* `VERIFRAX`
+* `AUCTORISEAL`
+* `CORPIFORM`
+* `VERIFRAX-SPEC`
+* `VERIFRAX-verify`
+* `proof`
+* `SIGILLARIUM`
+* `apply`
+* `VERIFRAX-DOCS`
+* `ARCHITECTURE`
 
-Registry identity anchors system provenance. Runtime enforcement does not depend on registry availability.
+It is not:
 
----
+* the authored protocol source
+* the authority issuer
+* the governed execution runtime
+* the public verifier
+* the proof publication surface
+* the archive surface
+* the intake surface
+* the evidence-root chain registry
+* a generic vulnerability scanner
+* a linter marketed as enforcement
+* a narrative policy repository with no executable consequence
 
-# Threat Model
+It must not claim to:
 
-CICULLIS addresses the following adversarial classes:
+* decide truth
+* issue authority
+* verify proofs as the verifier surface
+* execute governed runtime receipts
+* publish artifact-0005 as the evidence root of record
+* replace repository-specific semantics with generic enforcement theater
 
-1. Malicious pull request attempting to bypass declared policy.
-2. Contributor attempting partial compliance.
-3. Reviewer attempting to merge without satisfying enforcement invariants.
-4. Accidental regression of governance guarantees.
+Enforcement is not authority.
+Enforcement is not runtime.
+Enforcement is not proof verification.
+Enforcement is not protocol authorship.
 
-Out of scope:
+## Why this repository exists
 
-* Compromised GitHub infrastructure.
-* Compromised runner operating system.
-* Maintainer with administrative override capability.
-* Cryptographic key compromise outside repository control.
+Documentation-only governance fails at the first adversarial branch.
 
-CICULLIS assumes branch protection is enforced and administrative bypass is disabled.
+A limiting case makes that obvious:
 
----
+If a rule exists only in prose, then the first unchecked workflow can ignore it.
+If a merge gate can warn instead of terminate, then the rule is optional in practice.
+If a repo can say “must” while CI still permits the opposite, the real rule is whatever CI allowed.
 
-# Trust Boundary
+This repository exists to close that gap.
 
-Trusted:
+`cicullis` converts selected repository rules into executable refusal.
 
-* Repository state at merge time.
-* GitHub Actions execution environment.
-* Enforced branch protection rules.
+## Position in the Verifrax system
 
-Untrusted:
+The load-bearing split is:
 
-* Pull request content.
-* Contributor intent.
-* Forked repository inputs.
+* [`.github`](https://github.com/Verifrax/.github) — organization governance perimeter
+* [`VERIFRAX`](https://github.com/Verifrax/VERIFRAX) — authored source and evidence-root chain context
+* [`AUCTORISEAL`](https://github.com/Verifrax/AUCTORISEAL) — authority issuance and authority reference
+* [`CORPIFORM`](https://github.com/Verifrax/CORPIFORM) — governed execution and receipt boundary
+* [`VERIFRAX-SPEC`](https://github.com/Verifrax/VERIFRAX-SPEC) — derived specification publication
+* [`VERIFRAX-verify`](https://github.com/Verifrax/VERIFRAX-verify) — public verifier surface
+* [`proof`](https://github.com/Verifrax/proof) — public proof publication
+* [`SIGILLARIUM`](https://github.com/Verifrax/SIGILLARIUM) — archive and seal reference
+* [`apply`](https://github.com/Verifrax/apply) — intake surface
+* [`cicullis`](https://github.com/Verifrax/cicullis) — enforcement boundary
 
-CICULLIS operates strictly within repository state and workflow context.
+The precise role of `cicullis` is to sit at the enforcement layer, consuming declared rules and turning them into pass/fail CI outcomes.
 
----
+## Public host ownership
 
-# Core Principles
+This repository owns:
 
-## Determinism
+* `https://cicullis.verifrax.net/`
 
-Given identical repository state and workflow configuration, CICULLIS produces identical output.
+That host should remain an enforcement reference surface only.
 
-No randomness.
-No adaptive logic.
-No environment‑dependent branching.
+It must not become:
 
-## Binary Enforcement
+* `https://api.verifrax.net/`
+* `https://proof.verifrax.net/`
+* `https://auctoriseal.verifrax.net/`
+* `https://corpiform.verifrax.net/`
+* `https://verify.verifrax.net/`
+* `https://sigillarium.verifrax.net/`
+* `https://apply.verifrax.net/`
+* `https://docs.verifrax.net/`
+* `https://status.verifrax.net/`
 
-Outcomes:
+And it must not render:
 
-* PASS (exit 0)
-* FAIL (non‑zero exit)
+* the commercial landing body
+* the proof body
+* the verifier body
+* the authority body
+* the runtime execution body
+* the archive body
+* the intake body
 
-No degraded states exist.
+If two hosts say the same thing, one of them is lying about its role.
 
-## Forward‑Only Governance
+## Enforcement boundary
 
-CICULLIS enforces invariants prior to merge. It does not remediate after merge.
+The enforcement surface is responsible for turning declared constraints into binary outcomes.
 
-## Non‑Configurability
+Typical classes include:
 
-There are:
+* repository identity checks
+* required-file checks
+* policy-surface checks
+* immutability and branch-discipline checks
+* truth-surface consistency checks
+* failure-on-drift rules
+* refusal on missing required surfaces
 
-* No runtime flags
-* No per‑rule toggles
-* No “warn‑only” mode
-* No conditional bypass paths
+The important constraint is not breadth.
+It is consequence.
 
-Behavioral changes require version increment.
+A rule enforced here should either pass or terminate.
+Not warn.
+Not suggest.
+Not defer.
 
----
+## What CICULLIS does not decide
 
-# Enforcement Domains
+`cicullis` does not decide:
 
-CICULLIS evaluates the following irreversible domains:
+* whether protocol claims are true
+* whether authority is valid as the authority issuer of record
+* whether governed runtime execution should occur
+* whether a proof is semantically valid under verifier rules
+* whether an archived artifact should be considered canonical history
 
-1. Time boundary validation
-2. Custody declaration integrity
-3. Provenance sealing
-4. Boundary transition discipline
-5. Deterministic verification
-6. Attestation emission
-7. Final judgment
+Those belong elsewhere.
 
-Failure in any domain blocks merge.
+A strong negative case matters here:
 
----
+If `cicullis` started issuing authority, `AUCTORISEAL` would no longer be the authority layer.
+If `cicullis` started producing receipts, `CORPIFORM` would no longer be the execution boundary.
+If `cicullis` started verifying proof semantics, `VERIFRAX` or `VERIFRAX-verify` would lose their role clarity.
 
-# Architecture
+So this repo must remain hard-bounded.
 
-CICULLIS consists of:
+## Relationship to governance
 
-* A GitHub Action interface
-* A deterministic shell execution engine
-* A fixed evaluation pipeline
-* A stable failure code surface
+`cicullis` consumes governance-facing rules.
+It does not author governance truth at the org boundary.
 
-There are no external network dependencies in decision logic.
+The relationship is:
 
----
+* `.github` defines the organization-governance perimeter
+* `AUCTORISEAL` defines authority issuance and authority reference
+* governed repositories declare their own bounded truth surfaces
+* `cicullis` enforces selected repository and workflow constraints against those declared boundaries
 
-# Action Interface
+That is the correct direction.
+Not the reverse.
 
-## Inputs
+## Relationship to artifact-0005
 
-None.
+This repository must remain aligned with artifact-0005 because enforcement drift can damage the seal perimeter indirectly.
 
-CICULLIS derives all required state from repository context.
+But its role is limited:
 
-## Outputs
+* `cicullis` does not author artifact-0005
+* `cicullis` does not issue the artifact-0005 authority object
+* `cicullis` does not execute the governed artifact-0005 runtime path
+* `cicullis` does not verify artifact-0005 as the public verifier surface
+* `cicullis` does not register artifact-0005 in the evidence root
 
-* Exit code (0 = PASS, non‑zero = FAIL)
-* Structured failure message
+What it does do is support the perimeter by making policy refusal executable where enforcement is intended.
 
-## Exit Codes
+That is a real dependency, but a bounded one.
 
-Exit codes map deterministically to failure domains.
+## Inputs and outputs
 
----
+### Inputs
 
-# Quick Start
+This repository consumes declared policy, repository surfaces, workflow conditions, and enforcement-target material.
 
-```yaml
-- uses: Verifrax/cicullis@v1
-```
+### Outputs
 
----
+This repository emits enforcement outcomes only, such as:
 
-# Minimal Workflow
+* pass/fail gate results
+* workflow termination
+* deterministic refusal where configured
+* enforcement-surface documentation
 
-```yaml
-name: CICULLIS
+It does not emit:
 
-on:
-  pull_request:
+* authority objects
+* governed execution receipts
+* proof artifacts
+* archive catalogs
+* intake submissions
+* evidence-root artifact registration
 
-permissions:
-  contents: read
+## Reading order
 
-jobs:
-  cicullis:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: Verifrax/cicullis@v1
-```
+A reader should not start here to understand protocol semantics.
 
----
+A useful reading order is:
 
-# High‑Assurance Configuration
+1. `.github` — governance perimeter
+2. `VERIFRAX` — authored source and evidence-root chain context
+3. `AUCTORISEAL` — authority layer
+4. `CORPIFORM` — governed execution layer
+5. `cicullis` — enforcement boundary
+6. outward surfaces by role: `proof`, `VERIFRAX-verify`, `SIGILLARIUM`, `apply`
 
-For regulated or compliance‑bound environments:
+If a reader tries to learn authored protocol semantics from `cicullis`, they are already one layer too late.
 
-* Pin CICULLIS to immutable commit SHA.
-* Require status checks before merge.
-* Enforce signed commits.
-* Require code owner review.
-* Disable admin bypass.
-* Require linear history.
+## Action and CI posture
 
-Example:
+If this repository exposes a GitHub Action or workflow-consumable enforcement surface, that surface must be described mechanically, not theatrically.
 
-```yaml
-- uses: Verifrax/cicullis@<immutable-commit-sha>
-```
+That means the README should stay aligned with real execution behavior such as:
 
----
+* what inputs are consumed
+* what failure classes exist
+* what blocks execution
+* what repository surfaces are checked
+* what conditions terminate a run
 
-# Failure Model
+It must not rely on inflated claims like “final,” “authoritative,” or “production” unless the exact boundary for those words is mechanically provable.
 
-Example failure output:
+Enforcement language without executable scope is noise.
 
-```
-CI-GATE FAILED
-Rule: PROVENANCE.SEAL.MISSING
-Decision: BLOCKED
-```
+## What problem a reader should solve here
 
-Failure codes are stable contracts. They change only with version increment.
+A reader should land here to answer questions like:
 
----
+* what is the enforcement boundary in the Verifrax perimeter?
+* what kinds of rules become binary here?
+* what public host owns the enforcement surface?
+* how is this different from governance, authority, execution, and verification?
+* does this repository block or merely describe?
 
-# Failure Codes (Stable Surface)
+A reader should not land here expecting:
 
-| Rule Code                   | Meaning                                    |
-| --------------------------- | ------------------------------------------ |
-| PROVENANCE.SEAL.MISSING     | Required provenance record absent          |
-| CUSTODY.DECLARATION.MISSING | Custodian not declared                     |
-| TIME.CLASP.INVALID          | Temporal declaration invalid               |
-| BOUNDARY.TRANSITION.DENIED  | Preconditions not satisfied                |
-| VERIFICATION.UNVERIFIABLE   | Claim cannot be cryptographically verified |
+* proof inspection
+* verifier UI behavior
+* execution receipts
+* authority object issuance
+* intake submission flow
+* archive browsing
 
----
+## CI and determinism expectations
 
-# Determinism Guarantees
+A repository that claims enforcement should not live on rhetoric alone.
 
-CICULLIS guarantees:
+At minimum, the enforcement surface should remain compatible with:
 
-* No network‑dependent decision logic.
-* No external mutable state.
-* No runtime configuration drift.
-* Identical results under identical repository state.
+* deterministic behavior for the same inputs
+* explicit refusal semantics
+* visible boundary between rule definition and rule execution
+* no advisory-mode language unless advisory mode actually exists
+* no “passes” claim if the repository only documents policy and enforces nothing
 
----
+If enforcement can be bypassed trivially, it is not an enforcement boundary.
 
-# Operational Assumptions
+## Neighboring surfaces it must reference correctly
 
-CICULLIS assumes:
+This repository should preserve correct links and separations with:
 
-* Branch protection is enforced.
-* Required status checks are enabled.
-* Admin bypass is disabled.
-* Commits are cryptographically signed.
+* [`.github`](https://github.com/Verifrax/.github)
+* [`VERIFRAX`](https://github.com/Verifrax/VERIFRAX)
+* [`AUCTORISEAL`](https://github.com/Verifrax/AUCTORISEAL)
+* [`CORPIFORM`](https://github.com/Verifrax/CORPIFORM)
+* [`VERIFRAX-SPEC`](https://github.com/Verifrax/VERIFRAX-SPEC)
+* [`VERIFRAX-verify`](https://github.com/Verifrax/VERIFRAX-verify)
+* [`proof`](https://github.com/Verifrax/proof)
+* [`SIGILLARIUM`](https://github.com/Verifrax/SIGILLARIUM)
+* [`apply`](https://github.com/Verifrax/apply)
 
-Absent these controls, enforcement guarantees degrade.
+But it must not blur those links into role duplication.
 
----
+## Reader contract
 
-# Limitations
+A reader should be able to answer these immediately:
 
-CICULLIS does not:
+1. Is this the enforcement boundary? Yes.
+2. Does it own `cicullis.verifrax.net`? Yes.
+3. Does it issue authority? No.
+4. Does it execute governed receipts? No.
+5. Does it verify proofs as the verifier surface? No.
+6. Does it publish proofs? No.
+7. Does it archive seals? No.
+8. Does it need to stay aligned with artifact-0005? Yes.
 
-* Replace branch protection.
-* Replace human code review.
-* Detect runtime vulnerabilities.
-* Protect against infrastructure compromise.
-* Prevent administrator override outside enforced policy.
+If those answers are not obvious, the README is still too weak.
 
-It enforces merge‑time invariants only.
+## Host ownership lock
 
----
+This repository must be the sole owning repository for `cicullis.verifrax.net`.
 
-# SAST Stance
+No other repository may claim sole ownership of that host.
 
-CICULLIS primarily evaluates shell and YAML policy logic.
+This repository does not own:
 
-There is no substantial analyzable application code target for CodeQL.
+* the execution surface
+* the proof publication surface
+* the verifier surface
+* the intake surface
+* the archive surface
+* the evidence-root registry
 
-OpenSSF Scorecard SAST may report 0.
-This is intentional.
+## Verifrax system path labels
 
-Security signal derives from deterministic enforcement and governance strictness.
+The governed Verifrax path that this README must stay compatible with is:
 
----
+1. `.github` — organization governance and governed repository boundary
+2. `AUCTORISEAL` — authority issuance and public authority reference
+3. `CORPIFORM` — governed execution and receipt emission
+4. `VERIFRAX` — authored protocol, evidence root, and artifact-chain registration boundary
+5. `VERIFRAX-SPEC` — derived specification publication surface
+6. `VERIFRAX-PROFILES` — deterministic profile-constraint surface
+7. `VERIFRAX-SAMPLES` — pinned sample and reproducibility surface
+8. `VERIFRAX-verify` — public verification repository and UI boundary
+9. `VERIFRAX-DOCS` — explanatory documentation surface
+10. `cicullis` — enforcement boundary
+11. `proof` — proof publication surface
+12. `SIGILLARIUM` — seal and archive reference surface
+13. `apply` — intake surface
 
-# Supply‑Chain Integrity Recommendations
+The live host-label map that must remain explicit and non-contradictory is:
 
-* Pin all GitHub Actions by SHA.
-* Minimize workflow permissions.
-* Maintain strict review discipline.
-* Snapshot branch protection configuration.
+* `https://api.verifrax.net/` — execution surface
+* `https://proof.verifrax.net/` — proof publication surface
+* `https://auctoriseal.verifrax.net/` — authority issuance and authority reference surface
+* `https://corpiform.verifrax.net/` — runtime and receipt reference surface
+* `https://cicullis.verifrax.net/` — enforcement reference surface
+* `https://verify.verifrax.net/` — public verification surface
+* `https://sigillarium.verifrax.net/` — seal and archive reference surface
+* `https://apply.verifrax.net/` — intake surface
+* `https://docs.verifrax.net/` — documentation surface
 
-CICULLIS enforces within CI. It does not replace governance discipline.
+This README must remain compatible with `artifact-0005` as the load-bearing authority → execution → verification → evidence boundary without claiming that this repository alone authors, proves, seals, or registers `artifact-0005` unless that role is actually true for this repository.
 
----
 
-# Evaluation Protocol
+## Security
 
-To evaluate CICULLIS:
+Treat enforcement bypass, false-pass conditions, and rule-scope ambiguity as security-relevant defects.
 
-Open an issue titled:
+Do not use public issues for sensitive findings if a private reporting route exists.
 
-* `EVALUATION RESULT: PASS`
-* `EVALUATION RESULT: FAIL`
+An enforcement repository with ambiguous failure behavior is more dangerous than a clearly passive repository, because it invites trust it may not deserve.
 
-Include:
+## Contributing
 
-* Repository URL
-* Workflow run URL
-* CICULLIS version or SHA
-* Runner OS
-* Observed failure code
-* Minimal reproduction steps
+A contribution here is wrong if it:
 
----
+* makes `cicullis` sound like the protocol source
+* makes `cicullis` sound like the authority issuer
+* makes `cicullis` sound like the governed runtime
+* makes `cicullis` sound like the proof or verifier surface
+* introduces fake finality language
+* introduces host ambiguity
+* weakens the enforcement-only boundary
+* implies artifact-0005 authorship or registration
+* leaves the repo sounding like a generic policy essay instead of an enforcement boundary
 
-# Versioning
+## License
 
-Semantic Versioning.
-
-* Major: invariant change
-* Minor: additive stable capability
-* Patch: non‑behavioral correction
-
-Pin versions to guarantee determinism.
-
----
-
-# License
-
-Apache License 2.0
-
-Operational responsibility remains with the operator.
-
----
-
-# Final Statement
-
-CICULLIS enforces irreversible merge boundaries.
-
-PASS permits merge.
-FAIL blocks execution.
-
-No advisory mode exists.
+Apache License Version 2.0. See `LICENSE`.
