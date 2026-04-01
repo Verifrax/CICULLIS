@@ -1,0 +1,18 @@
+.panel {
+  background: var(--vf-panel);
+  border: 1px solid var(--vf-line);
+  border-radius: var(--vf-radius-3);
+  padding: var(--vf-space-5);
+}
+
+.panel h2,
+.panel h3 {
+  margin-top: 0;
+  margin-bottom: var(--vf-space-3);
+}
+
+.panel p:last-child,
+.panel ul:last-child,
+.panel dl:last-child {
+  margin-bottom: 0;
+}

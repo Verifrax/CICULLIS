@@ -5,25 +5,36 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>CICULLIS Boundary</title>
   <meta name="description" content="CICULLIS enforcement boundary reference for cicullis.verifrax.net.">
+  <style>
+    @import url("../surface-system/shell/base.css");
+  </style>
 </head>
 <body>
-  <main>
-    <h1>CICULLIS Boundary</h1>
-    <p>Boundary reference only.</p>
-    <ul>
-      <li>Does not issue authority.</li>
-      <li>Does not verify truth claims.</li>
-      <li>Does not execute runtime actions.</li>
-      <li>Does not archive seals or publish proof objects.</li>
-    </ul>
-    <h2>Surface Separation</h2>
-    <ul>
-      <li>AUCTORISEAL → authority reference</li>
-      <li>API → execution</li>
-      <li>VERIFY → verification</li>
-      <li>PROOF → proof publication</li>
-      <li>SIGILLARIUM → seal archive</li>
-    </ul>
+  <main class="surface stack">
+    <div class="surface-id">VERIFRAX / enforcement/boundary</div>
+    <h1 class="surface-title">CICULLIS Boundary</h1>
+    <p class="surface-role">Enforcement boundary reference.</p>
+    <p class="surface-boundary">This route defines separation boundaries only. It does not issue authority, verify truth claims, or execute runtime actions.</p>
+
+    <section class="panel">
+      <h2>Surface separation</h2>
+      <ul class="list-tight">
+        <li>AUCTORISEAL → authority reference</li>
+        <li>API → execution</li>
+        <li>VERIFY → verification</li>
+        <li>PROOF → proof publication</li>
+        <li>SIGILLARIUM → seal archive</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Adjacent surfaces</h2>
+      <div class="links">
+        <a href="/rules">Rules</a>
+        <a href="/actions">Actions</a>
+        <a href="/">Return to enforcement surface</a>
+      </div>
+    </section>
   </main>
 </body>
 </html>

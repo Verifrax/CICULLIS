@@ -5,18 +5,35 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>CICULLIS Actions</title>
   <meta name="description" content="CICULLIS enforcement action reference for cicullis.verifrax.net.">
+  <style>
+    @import url("../surface-system/shell/base.css");
+  </style>
 </head>
 <body>
-  <main>
-    <h1>CICULLIS Actions</h1>
-    <p>Action reference only. No action is executed from this host.</p>
-    <h2>Reference Actions</h2>
-    <ul>
-      <li>Reject — input or state is outside allowed boundary.</li>
-      <li>Defer — insufficient signal for deterministic resolution.</li>
-      <li>Accept — action is within published authority and boundary.</li>
-      <li>Escalate — state requires authority review before any execution.</li>
-    </ul>
+  <main class="surface stack">
+    <div class="surface-id">VERIFRAX / enforcement/actions</div>
+    <h1 class="surface-title">CICULLIS Actions</h1>
+    <p class="surface-role">Enforcement action reference.</p>
+    <p class="surface-boundary">This route defines action classes only. No action is executed from this host.</p>
+
+    <section class="panel">
+      <h2>Reference actions</h2>
+      <ul class="list-tight">
+        <li>Reject — input or state is outside allowed boundary.</li>
+        <li>Defer — insufficient signal for deterministic resolution.</li>
+        <li>Accept — action is within published authority and boundary.</li>
+        <li>Escalate — state requires authority review before any execution.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Adjacent surfaces</h2>
+      <div class="links">
+        <a href="/rules">Rules</a>
+        <a href="/boundary">Boundary</a>
+        <a href="/">Return to enforcement surface</a>
+      </div>
+    </section>
   </main>
 </body>
 </html>
