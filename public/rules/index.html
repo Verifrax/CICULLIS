@@ -5,24 +5,36 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>CICULLIS Rules</title>
   <meta name="description" content="CICULLIS enforcement rules reference for cicullis.verifrax.net.">
+  <style>
+    @import url("../surface-system/shell/base.css");
+  </style>
 </head>
 <body>
-  <main>
-    <h1>CICULLIS Rules</h1>
-    <p>Reference only. This surface does not execute enforcement.</p>
-    <ul>
-      <li>Authority is defined by auctoriseal.verifrax.net.</li>
-      <li>Execution belongs to api.verifrax.net.</li>
-      <li>Verification belongs to verify.verifrax.net.</li>
-    </ul>
-    <h2>Rule Set</h2>
-    <ol>
-      <li>No host may claim authority outside its assigned boundary.</li>
-      <li>No proof surface may execute runtime or intake logic.</li>
-      <li>No intake surface may publish verification or pricing logic.</li>
-      <li>Only published authority artifacts may bind governed enforcement state.</li>
-      <li>Enforcement references must remain reproducible and publicly inspectable.</li>
-    </ol>
+  <main class="surface stack">
+    <div class="surface-id">VERIFRAX / enforcement/rules</div>
+    <h1 class="surface-title">CICULLIS Rules</h1>
+    <p class="surface-role">Enforcement rules reference.</p>
+    <p class="surface-boundary">This route publishes rules only. It does not execute enforcement or issue authority.</p>
+
+    <section class="panel">
+      <h2>Rule set</h2>
+      <ol class="list-tight">
+        <li>No host may claim authority outside its assigned boundary.</li>
+        <li>No proof surface may execute runtime or intake logic.</li>
+        <li>No intake surface may publish verification or pricing logic.</li>
+        <li>Only published authority artifacts may bind governed enforcement state.</li>
+        <li>Enforcement references must remain reproducible and publicly inspectable.</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>Adjacent surfaces</h2>
+      <div class="links">
+        <a href="/boundary">Boundary</a>
+        <a href="/actions">Actions</a>
+        <a href="/">Return to enforcement surface</a>
+      </div>
+    </section>
   </main>
 </body>
 </html>

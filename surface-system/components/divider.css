@@ -1,0 +1,5 @@
+.divider {
+  height: 1px;
+  background: var(--vf-line);
+  margin: var(--vf-space-6) 0;
+}

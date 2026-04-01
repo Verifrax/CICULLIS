@@ -1,0 +1,19 @@
+code, pre, .mono {
+  font-family: var(--vf-font-mono);
+}
+
+code {
+  padding: 2px 6px;
+  border: 1px solid var(--vf-line);
+  border-radius: var(--vf-radius-1);
+  background: var(--vf-panel-2);
+}
+
+pre {
+  margin: 0;
+  padding: var(--vf-space-4);
+  border: 1px solid var(--vf-line);
+  border-radius: var(--vf-radius-2);
+  background: var(--vf-panel-2);
+  overflow-x: auto;
+}

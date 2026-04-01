@@ -5,18 +5,35 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>CICULLIS Enforcement Reference</title>
   <meta name="description" content="CICULLIS enforcement reference surface for cicullis.verifrax.net.">
+  <style>
+    @import url("./surface-system/shell/base.css");
+  </style>
 </head>
 <body>
-  <main>
-    <h1>CICULLIS Enforcement Reference</h1>
-    <p>Enforcement reference only.</p>
-    <ul>
-      <li>Role: enforcement reference surface</li>
-      <li>Execution host: api.verifrax.net</li>
-      <li>Authority source: auctoriseal.verifrax.net</li>
-      <li>Verification surface: verify.verifrax.net</li>
-      <li>Runtime reference: corpiform.verifrax.net</li>
-    </ul>
+  <main class="surface stack">
+    <div class="surface-id">VERIFRAX / enforcement</div>
+    <h1 class="surface-title">CICULLIS Enforcement Reference</h1>
+    <p class="surface-role">Enforcement reference surface.</p>
+    <p class="surface-boundary">This surface publishes enforcement reference only. It does not execute runtime, issue authority, or publish proof.</p>
+
+    <section class="panel">
+      <h2>Reference paths</h2>
+      <div class="links">
+        <a href="/rules">Rules</a>
+        <a href="/boundary">Boundary</a>
+        <a href="/actions">Actions</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>System boundary</h2>
+      <dl class="kv">
+        <dt>Execution host</dt><dd><a href="https://api.verifrax.net/">api.verifrax.net</a></dd>
+        <dt>Authority source</dt><dd><a href="https://auctoriseal.verifrax.net/">auctoriseal.verifrax.net</a></dd>
+        <dt>Verification surface</dt><dd><a href="https://verify.verifrax.net/">verify.verifrax.net</a></dd>
+        <dt>Runtime reference</dt><dd><a href="https://corpiform.verifrax.net/">corpiform.verifrax.net</a></dd>
+      </dl>
+    </section>
   </main>
 </body>
 </html>

@@ -1,0 +1,15 @@
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--vf-line);
+  border-radius: 999px;
+  font-family: var(--vf-font-mono);
+  font-size: 12px;
+  color: var(--vf-text);
+  background: var(--vf-panel-2);
+}
+
+.badge.success { color: var(--vf-success); }
+.badge.warning { color: var(--vf-warning); }
+.badge.danger  { color: var(--vf-danger); }
+.badge.accent  { color: var(--vf-accent); }

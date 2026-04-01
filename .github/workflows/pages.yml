@@ -22,20 +22,30 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/configure-pages@v5
 
-      - name: Verify enforcement surface inputs
+      - name: Prepare artifact
         shell: bash
         run: |
           set -euo pipefail
-          test -f CNAME
-          test -f public/index.html
-          grep -Fx "cicullis.verifrax.net" CNAME
+          rm -rf dist
+          mkdir -p dist/rules dist/boundary dist/actions
+          cp CNAME dist/CNAME
+          cp public/index.html dist/index.html
+          cp public/rules/index.html dist/rules/index.html
+          cp public/boundary/index.html dist/boundary/index.html
+          cp public/actions/index.html dist/actions/index.html
+          cp -R surface-system dist/surface-system
+          test -f dist/index.html
+          test -f dist/rules/index.html
+          test -f dist/boundary/index.html
+          test -f dist/actions/index.html
+          test -f dist/surface-system/shell/base.css
+          grep -Fx "cicullis.verifrax.net" dist/CNAME
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: dist
 
       - id: deployment
         uses: actions/deploy-pages@v4
