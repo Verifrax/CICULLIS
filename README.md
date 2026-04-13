@@ -1,6 +1,6 @@
 # CICULLIS
 
-Deterministic CI merge-gate and enforcement surface for the Verifrax perimeter.
+CICULLIS is the Verifrax enforcement-boundary primitive: the bounded primitive surface for enforcement and cutoff-boundary handling without becoming authored protocol source, authority issuance, governed execution, public verification, proof publication, archive/reference, or intake.
 
 ## Proof artifacts
 
@@ -24,68 +24,115 @@ This repository is part of the VERIFRAX proof perimeter.
 
 ## Status
 
-- Repository role: CI enforcement and GitHub Action surface only
-- npm package: `@verifrax/cicullis@0.1.0`
-- Action surface: `Verifrax/cicullis@v1`
-- Public host ownership: none
-- Repository class: governed enforcement surface
-- License: Apache License 2.0
+* Surface class: enforcement-boundary primitive
+* Repository class: primitive package surface
+* Public host ownership: none
+* Package: `@verifrax/cicullis`
+* Binary: `cicullis`
+* Current repository posture: live primitive boundary
+* License: Apache License Version 2.0
 
-## One-sentence role
+## Boundary
 
-CICULLIS enforces merge-time policy invariants deterministically without becoming protocol authority, execution runtime, proof publisher, or evidence-root registry.
+This repository owns the enforcement-boundary primitive only.
 
-## What this repository is
+It defines bounded enforcement and cutoff behavior as a primitive.
+It does not author normative source material.
+It does not issue authority.
+It does not execute governed actions.
+It does not verify published material.
+It does not publish proof.
+It does not serve as archive/reference.
+It does not operate intake.
+It does not replace adjacent sovereign boundaries.
 
-CICULLIS is the bounded enforcement surface of the stack.
+## What it does
 
-It exists to provide:
+- defines the enforcement-boundary primitive for bounded Verifrax use
+- preserves cutoff and boundary semantics as a primitive rather than a surface takeover
+- keeps primitive behavior inspectable and deterministic
+- supports adjacent repositories without claiming system-wide authority
+- anchors enforcement meaning as a primitive boundary
 
-- deterministic merge gating
-- stable failure-code contracts
-- GitHub Action integration for enforcement
-- pre-merge policy blocking
-- forward-only CI boundary enforcement
+## What it does not do
 
-## What this repository is not
-
-CICULLIS is not:
-
-- the authority layer
-- the execution runtime
-- the proof publication surface
-- the evidence-root registry
-- the verifier UI
-- a warning-only policy linter
-- an advisory scanner
-- a substitute for branch protection
-
-## Public package and action contract
-
-Public npm package:
-
-- `@verifrax/cicullis@0.1.0`
-
-Public action surface:
-
-- `Verifrax/cicullis@v1`
-
-These are enforcement distribution surfaces only. They do not grant authority, publish receipts, or register chain truth.
-
-## Stack position
-
-- `AUCTORISEAL` defines authority
-- `CORPIFORM` performs governed execution
-- `cicullis` blocks non-compliant change before merge
-- `VERIFRAX` records evidence-root chain truth
-
-## License
-
-Apache License 2.0
+- not authored protocol source; that belongs to VERIFRAX
+- not authority issuance; that belongs to AUCTORISEAL
+- not governed execution; that belongs to CORPIFORM
+- not public verification; that belongs to VERIFRAX-verify
+- not proof publication; that belongs to proof
+- not archive/reference; that belongs to SIGILLARIUM
+- not intake; that belongs to apply
+- not constitutional doctrine; that belongs to SYNTAGMARIUM
+- not canonical world-state; that belongs to ORBISTIUM
+- not reconciliation or repair; that belongs to CONSONORIUM
+- not sovereign cognition; that belongs to TACHYRIUM
 
 ## Adjacent sovereign surfaces
 
-This repository is part of the Verifrax sovereign stack and remains bounded relative to:
+- `VERIFRAX` — authored protocol and evidence-root boundary
+- `AUCTORISEAL` — authority issuance
+- `CORPIFORM` — governed execution
+- `VERIFRAX-verify` — public verification
+- `proof` — proof publication
+- `SIGILLARIUM` — archive/reference
+- `apply` — intake
 
-- **[ANAGNORIUM](https://github.com/Verifrax/ANAGNORIUM)** for terminal recognition
-- **[REGRESSORIUM](https://github.com/Verifrax/REGRESSORIUM)** for terminal recourse
+CICULLIS is a primitive.
+It does not become the repositories that consume it.
+
+## Public surface
+
+The public surface of this repository is its repository identity, README boundary, package surface, binary surface, and primitive materials carried by this repository.
+
+Publication here is not authored source.
+Publication here is not authority.
+Publication here is not execution.
+Publication here is not verification.
+Publication here is not proof publication.
+Publication here is not archive/reference.
+Publication here is not intake.
+
+## Package / host / repo truth
+
+Repository truth for CICULLIS lives in this repository.
+
+Package truth for this primitive is `@verifrax/cicullis`.
+Binary truth for this primitive is `cicullis`.
+Package, binary, and repository truth are related but not interchangeable.
+
+## Enforcement meaning in-system
+
+Enforcement in-system means the stack can point to CICULLIS and say that a bounded enforcement-boundary primitive belongs to this boundary.
+
+Enforcement here constrains.
+Enforcement here does not author.
+Enforcement here does not issue authority.
+Enforcement here does not execute.
+Enforcement here does not verify.
+Enforcement here does not publish proof.
+
+That does not by itself mean:
+
+- the primitive became authored protocol source
+- the primitive issued authority
+- the primitive executed a governed action
+- the primitive verified truth
+- the primitive published proof
+- the primitive replaced archive/reference
+- the primitive replaced intake
+- the primitive replaced the evidence-root repository
+
+## Not this
+
+CICULLIS is not authored protocol source.
+CICULLIS is not authority issuance.
+CICULLIS is not governed execution.
+CICULLIS is not public verification.
+CICULLIS is not proof publication.
+CICULLIS is not archive/reference.
+CICULLIS is not intake.
+
+## License
+
+Apache License Version 2.0
