@@ -1,6 +1,6 @@
 {
   "name": "@verifrax/cicullis",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "private": false,
   "description": "Deterministic GitHub enforcement action for Verifrax merge-time policy and compliance gating.",
   "license": "AGPL-3.0",
