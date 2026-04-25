@@ -19,8 +19,8 @@ This repository is part of the VERIFRAX proof perimeter.
 - **ARTIFACT-0002**
 - **ARTIFACT-0001**
 
-**Canonical public proof surface:** https://proof.verifrax.net  
-**Canonical proof publication repository:** https://github.com/Verifrax/proof  
+**Canonical public proof surface:** https://proof.verifrax.net
+**Canonical proof publication repository:** https://github.com/Verifrax/proof
 **Canonical evidence root:** https://github.com/Verifrax/VERIFRAX
 
 ## Terminal planes
@@ -139,4 +139,6 @@ CICULLIS is not intake.
 
 ## License
 
-This repository is licensed under the GNU General Public License v3.0. See `LICENSE`.
+This repository is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+
+This license applies to the repository source surface. Package metadata, README wording, and public package pages are subordinate to the repository license file and the accepted Verifrax perimeter truth.
